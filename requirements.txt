@@ -1,9 +1,8 @@
 streamlit
-spacy
+spacy[en]==3.8.0
 requests
 pyttsx3
 transformers
 rapidfuzz
 googletrans==4.0.0-rc1
-pip --upgrade
 torch
