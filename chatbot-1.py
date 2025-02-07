@@ -1,36 +1,27 @@
-
+# Imports des bibliothèques standards
 import os
 import sys
 import subprocess
-import spacy.cli
-spacy.cli.download("en_core_web_sm")
-import spacy
-import streamlit as st
-import streamlit as st
-import spacy
-import os
-import sys
-import subprocess
-
-# Assurer le téléchargement et l'import correct de SpaCy
-import spacy.cli
-spacy.cli.download("en_core_web_sm")
-import spacy
-
-import streamlit as st
-import requests
-import pyttsx3
 import threading
 import xml.etree.ElementTree as ET
 
-# Vérifier et importer correctement transformers + Torch
+# Imports des bibliothèques externes
+import spacy
+import spacy.cli
+import streamlit as st
+import requests
+import pyttsx3
 import torch
-if not torch.cuda.is_available():
-    os.environ["CUDA_VISIBLE_DEVICES"] = ""
-
 from transformers import pipeline
 from rapidfuzz import process
 from googletrans import Translator
+
+# Assurer le téléchargement et l'import correct du modèle SpaCy
+spacy.cli.download("en_core_web_sm")
+
+# Désactiver CUDA si indisponible
+if not torch.cuda.is_available():
+    os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
 # ⚠️ Configuration des clés API (Remplace ces valeurs par tes vraies clés)
 NEWS_API_KEY = "f31f2e9fbd95493bb2333e92d1eaa1f0"

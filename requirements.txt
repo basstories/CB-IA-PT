@@ -1,8 +1,10 @@
 streamlit
-spacy[en]==3.8.0
+spacy==3.5.0
 requests
 pyttsx3
 transformers
 rapidfuzz
 googletrans==4.0.0-rc1
-torch
+numpy==1.22.0
+thinc==8.1.7
+torch==1.12.1
