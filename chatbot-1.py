@@ -38,7 +38,7 @@ def load_nlp():
         os.environ["SPACY_DATA"] = local_data_dir
         
         # Télécharger le modèle via la commande intégrée de SpaCy
-        spacy.cli.download("en_core_web_sm")
+        spacy.cli.download("en_core_web_sm", False, "--user")
         
         # Charger à nouveau le modèle une fois téléchargé
         return spacy.load("en_core_web_sm")

@@ -5,3 +5,5 @@ pyttsx3
 transformers
 rapidfuzz
 googletrans==4.0.0-rc1
+pip --upgrade
+torch
