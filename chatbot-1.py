@@ -2,15 +2,33 @@
 import os
 import sys
 import subprocess
+import spacy.cli
+spacy.cli.download("en_core_web_sm")
 import spacy
 import streamlit as st
 import streamlit as st
 import spacy
+import os
+import sys
+import subprocess
+
+# Assurer le téléchargement et l'import correct de SpaCy
+import spacy.cli
+spacy.cli.download("en_core_web_sm")
+import spacy
+
+import streamlit as st
 import requests
 import pyttsx3
 import threading
-from transformers import pipeline
 import xml.etree.ElementTree as ET
+
+# Vérifier et importer correctement transformers + Torch
+import torch
+if not torch.cuda.is_available():
+    os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
+from transformers import pipeline
 from rapidfuzz import process
 from googletrans import Translator
 
