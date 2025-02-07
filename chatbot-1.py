@@ -1,13 +1,11 @@
-<<<<<<< HEAD
+
 import os
 import sys
 import subprocess
 import spacy
 import streamlit as st
-=======
 import streamlit as st
 import spacy
->>>>>>> 38d46e2 (Initialisation du projet et ajout des fichiers)
 import requests
 import pyttsx3
 import threading
@@ -16,10 +14,6 @@ import xml.etree.ElementTree as ET
 from rapidfuzz import process
 from googletrans import Translator
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 38d46e2 (Initialisation du projet et ajout des fichiers)
 # ⚠️ Configuration des clés API (Remplace ces valeurs par tes vraies clés)
 NEWS_API_KEY = "f31f2e9fbd95493bb2333e92d1eaa1f0"
 
@@ -28,8 +22,7 @@ st.set_page_config(page_title="Chatbot IA", layout="wide")
 
 # Charger le modèle SpaCy une seule fois
 @st.cache_resource
-def load_nlp():
-<<<<<<< HEAD
+def load_nlp()
     try:
         # Tente de charger le modèle normalement
         return spacy.load("en_core_web_sm")
@@ -49,9 +42,8 @@ def load_nlp():
         
         # Charger à nouveau le modèle une fois téléchargé
         return spacy.load("en_core_web_sm")
-=======
     return spacy.load("en_core_web_sm")
->>>>>>> 38d46e2 (Initialisation du projet et ajout des fichiers)
+
 
 nlp = load_nlp()
 
@@ -246,9 +238,3 @@ with col2:
 
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 38d46e2 (Initialisation du projet et ajout des fichiers)
