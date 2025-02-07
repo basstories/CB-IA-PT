@@ -22,7 +22,7 @@ st.set_page_config(page_title="Chatbot IA", layout="wide")
 
 # Charger le modèle SpaCy une seule fois
 @st.cache_resource
-def load_nlp()
+def load_nlp():
     try:
         # Tente de charger le modèle normalement
         return spacy.load("en_core_web_sm")
