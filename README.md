@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # chatbot-ia-portfolio
  Chatbot IA interactif avec Streamlit, NLP et API d’actualités IA
 # 🧠 Chatbot IA - Portfolio Project
@@ -123,3 +124,8 @@ streamlit run chatbot.py
 
 
 # ChatbotIA
+=======
+# CB-IA-PT
+
+Ceci est le fichier README pour mon projet Chatbot IA.
+>>>>>>> 38d46e2 (Initialisation du projet et ajout des fichiers)
