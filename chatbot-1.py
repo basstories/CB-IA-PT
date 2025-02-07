@@ -15,14 +15,14 @@ from transformers import pipeline
 from rapidfuzz import process
 from googletrans import Translator
 
+
 # Vérifier et télécharger le modèle SpaCy uniquement si nécessaire
-# Vérifier si le modèle SpaCy est installé, sinon l'installer automatiquement
 try:
-    nlp = spacy.load("en_core_web_sm")  # Vérifie si le modèle est déjà disponible
+    nlp = spacy.load("en_core_web_sm")
 except OSError:
     print("⚠️ Modèle 'en_core_web_sm' introuvable. Installation en cours...")
     os.system("python -m spacy download en_core_web_sm --user")
-    nlp = spacy.load("en_core_web_sm")  # Charger le modèle après installation
+    nlp = spacy.load("en_core_web_sm")  # Charger après installation
 
 # Désactiver CUDA si indisponible
 if not torch.cuda.is_available():
