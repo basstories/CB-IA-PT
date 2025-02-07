@@ -7,7 +7,6 @@ import xml.etree.ElementTree as ET
 
 # Imports des bibliothèques externes
 import spacy
-import spacy.cli
 import streamlit as st
 import requests
 import pyttsx3
@@ -16,8 +15,11 @@ from transformers import pipeline
 from rapidfuzz import process
 from googletrans import Translator
 
-# Assurer le téléchargement et l'import correct du modèle SpaCy
-spacy.cli.download("en_core_web_sm")
+# Vérifier et télécharger le modèle SpaCy uniquement si nécessaire
+try:
+    spacy.load("en_core_web_sm")  # Vérifie si le modèle est déjà disponible
+except OSError:
+    spacy.cli.download("en_core_web_sm")  # Télécharge le modèle si non trouvé
 
 # Désactiver CUDA si indisponible
 if not torch.cuda.is_available():
